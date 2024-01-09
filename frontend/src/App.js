@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider, theme } from '@chakra-ui/core';
+import { ThemeProvider, theme, CSSReset } from '@chakra-ui/core';
+import { Heading, Link } from "@chakra-ui/core";
+import Navbar from '../common/Navbar';
 
 function App() {
   return (
@@ -36,4 +40,17 @@ function App() {
       <TheRestOfYourApplication />
     </ChakraProvider>
   )
+
+  function MyApp({ Component, pageProps }) {
+    return (
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    )
+  }
+    <ThemeProvider theme={theme}>
+    <CSSReset />
+    <Component {...pageProps} />
+  </ThemeProvider>
+
 }
