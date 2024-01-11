@@ -30,3 +30,53 @@ const router = createBrowserRouter(
   }
 
   export default App
+
+  import * as React from 'react'
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react'
+
+function App() {
+  // 2. Wrap ChakraProvider at the root of your app
+  return (
+    <ChakraProvider>
+      <TheRestOfYourApplication />
+    </ChakraProvider>
+  )
+}
+
+import {
+  ChakraBaseProvider,
+  extendBaseTheme,
+  theme as chakraTheme,
+} from '@chakra-ui/react'
+
+const { Button } = chakraTheme.components
+
+const theme = extendBaseTheme({
+  components: {
+    Button,
+  },
+})
+
+function App() {
+  return (
+    <ChakraBaseProvider theme={_theme}>
+      <Component {...pageProps} />
+    </ChakraBaseProvider>
+  )
+}
+
+// ...
+import LoginForm from './pages/LoginForm';
+export default function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <CSSReset />
+        <ThemeToggler />
+        <LoginForm />
+      </ColorModeProvider>
+    </ThemeProvider>
+  );
+}
