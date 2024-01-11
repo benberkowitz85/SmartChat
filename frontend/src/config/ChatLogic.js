@@ -1,5 +1,5 @@
 //Define Margin between messages depending on relation to sender
-export const isSameSenderMargin = (messages, m, i, userId) => {
+export const checkSameSenderMargin = (messages, m, i, userId) => {
 
     if (
       i < messages.length - 1 &&
@@ -37,4 +37,12 @@ export const checkSender = (loggedUser, users) => {
   //Return sender username
   export const getSenderFull = (loggedUser, users) => {
     return users[0]._id === loggedUser._id ? users[1] : users[0];
+  };
+//check if it's the sender's last message
+  export const checkLastMessage = (messages, i, userId) => {
+    return (
+      i === messages.length - 1 &&
+      messages[messages.length - 1].sender._id !== userId &&
+      messages[messages.length - 1].sender._id
+    );
   };
