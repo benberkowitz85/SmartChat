@@ -36,13 +36,9 @@ Ben Berkowitz
 Michael Pigott
 Katherine Vogler
 
-#
-
 Components
 Building this required the use of the following languages, frameworks, or applications:
 React, Vite, MongoDB, Render, Chakra ((will add to this)) 
-
-#
 
 Tutorials: 
 ((add any other resources))
