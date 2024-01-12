@@ -1,5 +1,6 @@
 import {Heading, Text, Box, Flex } from "@chakra-ui/react";
 import './App.css'
+import { Button, } from '@chakra-ui/react'
 
 function App() {
   return (
@@ -11,10 +12,10 @@ function App() {
     >
       <Box maxW="2xl" m=") auto">
         <Heading as="h1" textAlign="center" fontSize="5xl" mt="100px">
-             This is SmartChat!
+             Welcome to SmartChat!
         </Heading>
         <Text fontSize="xl" textAlign="center" mt="30px">
-          This is a page made it with Chakra, Vite and React!
+        A Scholarly-focused chat, where researchers, academics, students and thinkers can find articles, create discussion threads and find resources. 
         </Text>
         <Text
           w="fit-content"
@@ -36,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
