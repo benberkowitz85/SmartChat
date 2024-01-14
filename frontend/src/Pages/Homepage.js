@@ -25,10 +25,10 @@ const Homepage = () => {
             </Tablist>
             <TabPanels>
               <TabPanel>
-              {/*Login goes here*/}
+              <Login />
               </TabPanel>
               <TabPanel>
-                {/*Login goes here*/}
+                <Signup />
               </TabPanel>
             </TabPanels>
           </Tabs>
