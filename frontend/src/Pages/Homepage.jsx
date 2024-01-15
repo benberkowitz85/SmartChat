@@ -34,29 +34,29 @@ import {
           borderRadius="lg"
           borderWidth="1px"
         >
-          <Text fontSize="4xl" fontFamily="Work sans">
+          <Text fontSize="4xl" fontFamily="Work sans" color="black">
             Talk-A-Tive
           </Text>
         </Box>
-        <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
-          <Tabs isFitted variant="soft-rounded">
-            <TabList mb="1em">
-              <Tab>Login</Tab>
-              <Tab>Sign Up</Tab>
+        <Box bg="white" w="100%" p={4} borderRadius="lg" color="black" borderWidth="1px">
+          <Tabs variant="soft-rounded">
+            <TabList mb='1em'>
+            <Tab width="50%">Login</Tab>
+            <Tab width="50%">Sign Up</Tab>
             </TabList>
             <TabPanels>
-              <TabPanel>
-                <Login />
-              </TabPanel>
-              <TabPanel>
-                <Signup />
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-        </Box>
-      </Container>
+               <TabPanel>
+               <Login />
+               </TabPanel>
+                 <TabPanel>
+                 <Signup />
+                 </TabPanel>
+                 </TabPanels>
+                 </Tabs>
+                 </Box>
+                </Container>
     );
-  }
+  };
   
   export default Homepage;
   
