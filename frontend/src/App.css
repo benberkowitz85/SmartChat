@@ -3,7 +3,7 @@
 .App{
   min-height: 100vh;
   display: flex;
-  background-image: url /*("./addabackgroundpicture.png")*/
+  background-image: url /*("./addabackgroundpicture.png")*/;
   background-size: cover;
   background-position: center;
 }
