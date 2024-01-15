@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "develop": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm run dev\"",
-    "install": "cd backend && npm i && cd ../frontend && npm i",
-    "build": "cd frontend && npm run build",
-    "render-build": "npm install && npm run build"
+    "start": "nodemon backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend" 
   },
   "keywords": [],
   "author": "",
