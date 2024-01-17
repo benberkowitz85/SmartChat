@@ -1,5 +1,5 @@
 # SmartChat
-\
+
 ## 
 PREMISE
 
@@ -27,14 +27,11 @@ Once you are within our chat area, there will be options to create groups, look 
 ##
 USAGE
 
-[ goes here. walk-through, describe features, add image(s) of app-- as many as is useful but minimum one ]
+The offering of a walk-through is limited to the presentation on Jan 17.  
 
-***To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the **relative filepath, add it to your README using the following syntax:
-**
-**    ```md
-**    ![alt text](assets/images/screenshot.png)
-**    ```
+Features are outlined in the installation directions.
 
+Our target user is a person in a scholarly field, whether teaching, researching, or learning as a student/novice. The application will give those individuals access to others within their field of expertise for discussion and interpersonal connection. It may also prove to be an effective networking tool, though that is not the original intent.  
 
 ##  
 CREDITS  
@@ -49,23 +46,23 @@ Ben Berkowitz https://github.com/benberkowitz85
 <br>
 Michael Pigott https://github.com/Michaelepigott
 <br>
-Katherine Vogler https://github.com/Katherine-V
-\
+Katherine Vogler https://github.com/Katherine-V  
+
 #
-\
+<br>
 Components  
 Building this required the use of these languages, frameworks, or applications:  
 
 React, express.js and node.js, Vite, MongoDB, mongoose, Render, Chakra, and VS Code.
-\
+<br>
 #
-\
+<br>
 Tutorials: 
 youtube.com/@prepbytes "MERN Stack Chat App"
-youtube.com/@roadsidecoder "MERN Stack Chat App"
-\
-\
+youtube.com/@roadsidecoder "MERN Stack Chat App"  
+
+  
 ##
 LICENSE  
-\
+<br>
 MIT License 2024
