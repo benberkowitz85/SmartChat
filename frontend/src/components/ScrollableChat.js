@@ -8,7 +8,7 @@ import {
   isSameUser,
 } from "../config/ChatLogics";
 import { ChatState } from "../Context/ChatProvider";
-
+//feed scroll
 const ScrollableChat = ({ messages }) => {
   const { user } = ChatState();
 
