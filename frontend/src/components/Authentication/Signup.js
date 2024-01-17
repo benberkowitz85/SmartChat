@@ -7,6 +7,10 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
 
+function refreshPage(){
+  window.location.reload();
+};
+
 const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -125,6 +129,7 @@ const Signup = () => {
         position: "bottom",
       });
       setPicLoading(false);
+      refreshPage();
       return;
     }
   };
