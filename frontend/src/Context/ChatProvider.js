@@ -20,7 +20,7 @@ const ChatProvider = ({ children }) => {
   }, [history]);
 
   return (
-    <ChatContext.Provider 
+    <ChatContext.Provider
       value={{
         selectedChat,
         setSelectedChat,
