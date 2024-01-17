@@ -1,3 +1,4 @@
+//sample data
 const chats = [
     {
       isGroupChat: false,
