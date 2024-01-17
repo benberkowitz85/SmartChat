@@ -17,12 +17,14 @@ How to get development environment running:
 
 Using your favorite terminal application (we recommend Git Bash) enter "npm start" from the root folder. This will start the server, so once this is achieved one will access the frontend folder and use the same command from there.
 
-After this point, the GUI is available to you for use.
+After this point, the GUI is available to you for use.  
+
+![login feature](screenshots/Screenshot1.png)
 
 You will find a landing page with options to sign up or login. Buttons and forms are intuitive and will guide you through the process of signing up.
 
 Once you are within our chat area, there will be options to create groups, look up chats or individual users, as well as the core function, engage in chats with others using the SmartChat app.
-
+![chat display](screenshots/Screenshot2.png)
 
 #  
 USAGE
