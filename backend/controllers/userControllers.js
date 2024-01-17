@@ -6,26 +6,26 @@ const generateToken = require('../config/generateToken');
 
 const registerUser = asyncHandler(async(req,res) => {
     const {name, email, password, pic } = req.body;
-
+//if all feilds not filled, send error
     if(!name || !email || !password) {
         res.status(400);
         throw new Error("Please enter all the fields");
     }
-
+//check if user exists
     const userExists = await User.findOne({email});
-
+//send error if user already exists
     if (userExists) {
         res.status(400);
         throw new Error("User already exists");
     }
-
+    //create user object
     const user = await User.create({
         name,
         email,
         password,
         pic,
     });
-
+//check if creation worked
     if (user) {
         res.status(201).json({
             id: user._id,
@@ -39,7 +39,7 @@ const registerUser = asyncHandler(async(req,res) => {
         throw new Error("Failed to create the user")
     }
 });
-
+//login function, check submitted credentials vs DB, login if match, error if not
 const authUser = asyncHandler(async(req,res) => {
     const {email, password} = req.body;
     const user = await User.findOne({email})
