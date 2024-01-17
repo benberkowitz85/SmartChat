@@ -15,7 +15,7 @@ const MyChats = ({ fetchAgain }) => {
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
 
   const toast = useToast();
-
+//Get chats from backend
   const fetchChats = async () => {
     // console.log(user._id);
     try {
@@ -42,9 +42,8 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-    // eslint-disable-next-line
   }, [fetchAgain]);
-
+//display chats
   return (
     <Box
       d={{ base: selectedChat ? "none" : "flex", md: "flex" }}

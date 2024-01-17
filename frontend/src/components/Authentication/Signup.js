@@ -6,7 +6,7 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
-
+//function to refresh page
 function refreshPage(){
   window.location.reload();
 };
@@ -26,6 +26,7 @@ const Signup = () => {
 
   const submitHandler = async () => {
     setPicLoading(true);
+    //send notification if all feilds arn't full
     if (!name || !email || !password || !confirmpassword) {
       toast({
         title: "Please Fill all the Feilds",
@@ -37,6 +38,7 @@ const Signup = () => {
       setPicLoading(false);
       return;
     }
+    //send notification if password confirm doesn't match
     if (password !== confirmpassword) {
       toast({
         title: "Passwords Do Not Match",
@@ -54,6 +56,7 @@ const Signup = () => {
           "Content-type": "application/json",
         },
       };
+      //send user item to backend/database
       const { data } = await axios.post(
         "/api/user",
         {
@@ -72,6 +75,7 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+      //also login when registering
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
       history.push("/chats");
@@ -101,12 +105,13 @@ const Signup = () => {
       return;
     }
     console.log(pics);
+    //handle Profile picture via cloudinary api
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("cloud_name", "dtfsuw6hy");
+      fetch("https://api.cloudinary.com/v1_1/dtfsuw6hy/image/upload", {
         method: "post",
         body: data,
       })
@@ -133,7 +138,7 @@ const Signup = () => {
       return;
     }
   };
-
+//Signup element
   return (
     <VStack spacing="5px">
       <FormControl id="first-name" isRequired>

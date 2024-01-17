@@ -20,6 +20,7 @@ const Login = () => {
   const { setUser } = ChatState();
 
   const submitHandler = async () => {
+    //send error if both feilds arn't filled
     setLoading(true);
     if (!email || !password) {
       toast({
@@ -32,7 +33,7 @@ const Login = () => {
       setLoading(false);
       return;
     }
-
+    //Test submitted login vs data, if succeeded login and  send positive notification, else error notification
     try {
       const config = {
         headers: {
@@ -45,7 +46,6 @@ const Login = () => {
         { email, password },
         config
       );
-
       toast({
         title: "Login Successful",
         status: "success",
@@ -53,6 +53,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
+      
       setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
@@ -69,7 +70,7 @@ const Login = () => {
       setLoading(false);
     }
   };
-
+//login form element
   return (
     <VStack spacing="10px">
       <FormControl id="email" isRequired>

@@ -136,7 +136,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     });
   });
-
+//if typing, display the currently typing ... icon
   const typingHandler = (e) => {
     setNewMessage(e.target.value);
 
@@ -148,6 +148,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     }
     let lastTypingTime = new Date().getTime();
     var timerLength = 3000;
+    //stop 'currently typing' icon after a bit
     setTimeout(() => {
       var timeNow = new Date().getTime();
       var timeDiff = timeNow - lastTypingTime;
@@ -157,7 +158,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     }, timerLength);
   };
-
+// chat element
   return (
     <>
       {selectedChat ? (
